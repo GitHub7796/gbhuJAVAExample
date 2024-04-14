@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+<!--项目基础配置-->
+    <groupId>org.example</groupId>
+    <artifactId>gbhuParent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<!--    note:非叶module设置为 pom-->
+    <packaging>pom</packaging>
+
+    <name>gbhuParent</name>
+    <url>http://maven.apache.org</url>
+
+<!--    子模块配置-->
+    <modules>
+        <module>javaPure</module>
+        <module>commonUtils</module>
+        <module>groovyPure</module>
+    </modules>
+
+
+</project>
