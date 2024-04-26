@@ -148,7 +148,7 @@
                     <executions>
                         <execution>
                             <goals>
-                                <!--                                groovy 仅单元测试，因此排除编译 goal-->
+                                <!--   groovy 仅单元测试，因此排除编译 goal-->
                                 <goal>compileTests</goal>
                             </goals>
                         </execution>

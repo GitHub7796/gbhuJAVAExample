@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+APP_FULL_NAME=$1
+# 获取绝对路径的文件名 /xxxx/app.jar -> app
+APP_NAME=$(basename -s .jar $APP_FULL_NAME)
+APP_HOME=$(dirname $APP_FULL_NAME)
+LOG_PATH=${APP_HOME}/log
+NOHUP_OUT_PATH=${LOG_PATH}/nohup_${APP_NAME}.out
+
+OP=$2
+
+checkpid(){
+    set -x
+    PID=$(ps -ef | grep $APP_NAME | grep -v "grep" | awk '{print $2}')
+    set +x
+}
+stop(){
+    checkpid
+    if [ ! -n  "$PID" ];then
+        echo "$APP_NAME not runing"
+    else
+        echo "$APP_NAME stop..."
+        kill $PID
+    fi
+}
+
+start(){
+    checkpid
+    if [ ! -n  "$PID" ];then
+        mkdir -p $LOG_PATH
+        nohup java -jar $APP_FULL_NAME >$NOHUP_OUT_PATH 2>&1 &
+        echo "---------------------------------"
+        echo "启动完成,ctrl+c退出日志界面即可>>> "
+        echo "---------------------------------"
+        tail -20 $NOHUP_OUT_PATH
+        sleep  3s
+    else
+        echo "$APP_NAME is runing,PID: $PID"
+    fi
+}
+
+status(){
+    checkpid
+    if [ ! -n "$PID" ];then
+        echo "$APP_NAME not runing"
+    else
+        echo "$APP_NAME running PID: $PID"
+    fi
+}
+
+
+case $OP in
+    start) start;;
+    stop) stop;;
+    restart) restart;;
+    status) status;;
+    *) echo "Usage:sh app.sh /xxx/application.jar start|stop|restart|status [javaArgs1 javaArgs2 ...]";;
+esac
