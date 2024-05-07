@@ -11,12 +11,4 @@
     <name>gbhuParent</name>
     <url>http://maven.apache.org</url>
 
-<!--    子模块配置-->
-    <modules>
-        <module>javaPure</module>
-        <module>commonUtils</module>
-        <module>groovyPure</module>
-    </modules>
-
-
 </project>

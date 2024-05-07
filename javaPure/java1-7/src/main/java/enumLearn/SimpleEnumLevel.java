@@ -1,6 +1,6 @@
 package enumLearn;
 
-public enum LevelSimpleEnum {
+public enum SimpleEnumLevel {
     HIGH,
     MEDIUM,
     LOW
