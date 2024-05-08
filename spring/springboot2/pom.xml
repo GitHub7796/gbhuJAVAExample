@@ -18,6 +18,7 @@
     <modules>
         <module>springboot2Pure</module>
         <module>springboot2Groovy4</module>
+        <module>ShiroLearn</module>
     </modules>
 
     <!--   properties 设置 -->
