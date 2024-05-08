@@ -5,15 +5,18 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/spring/springboot2/springboot2Pure/pom.xml" />
+        <option value="$PROJECT_DIR$/spring/springboot2/ShiroLearn/pom.xml" />
+        <option value="$MAVEN_REPOSITORY$/org/example/springboot2/2.7.18/springboot2-2.7.18.pom" />
         <option value="$PROJECT_DIR$/spring/springboot2/pom.xml" />
-        <option value="$PROJECT_DIR$/designPattern/pom.xml" />
-        <option value="$PROJECT_DIR$/commonUtils/pom.xml" />
-        <option value="$PROJECT_DIR$/javaPure/java1-7/pom.xml" />
-        <option value="$PROJECT_DIR$/spring/springboot2/spring5/pom.xml" />
-        <option value="$PROJECT_DIR$/spring/spring5/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$MAVEN_REPOSITORY$/org/example/springboot2/2.7.18/springboot2-2.7.18.pom" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
 </project>
