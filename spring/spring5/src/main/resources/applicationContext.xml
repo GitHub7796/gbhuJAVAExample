@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-4.2.xsd"
+        xmlns:aop="http://www.springframework.org/schema/aop">
+
+    <!--set注入-->
+<!--    <bean id="v" name="video2" class="com.gbhu.domain.Video"-->
+<!--    init-method="init" destroy-method="destroy">-->
+<!--        <property name="id" value="1"/>-->
+<!--        <property name="title" value="video-title"/>-->
+<!--    </bean>-->
+
+<!--&lt;!&ndash;    对象注入&ndash;&gt;-->
+<!--        <bean id="videoOrder" class="com.gbhu.domain.VideoOrder" init-method="init" autowire="byType">-->
+<!--&lt;!&ndash;        <bean id="videoOrder" class="com.gbhu.domain.VideoOrder" init-method="init" autowire="byName">&ndash;&gt;-->
+<!--&lt;!&ndash;        <bean id="videoOrder" class="com.gbhu.domain.VideoOrder" init-method="init" autowire="constructor">&ndash;&gt;-->
+<!--            <property name="id" value="1"/>-->
+<!--            <property name="outTradeNo" value="1"/>-->
+<!--&lt;!&ndash;            <property name="video" ref="video"/>&ndash;&gt;-->
+<!--        </bean>-->
+
+
+
+    <!--list、map注入-->
+    <!--    <bean id="video"  name="videoInfo" class="com.gbhu.domain.Video" scope="singleton">-->
+    <!--        <property name="chapterList">-->
+    <!--            <list>-->
+    <!--                <value>第一章节XXX</value>-->
+    <!--                <value>第二章节XXX</value>-->
+    <!--                <value>第三章节XXX</value>-->
+    <!--            </list>-->
+    <!--        </property>-->
+
+    <!--        <property name="videoMap">-->
+    <!--            <map>-->
+    <!--                <entry key="1" value="sringCloude课程"></entry>-->
+    <!--                <entry key="2" value="面试课程"></entry>-->
+    <!--            </map>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+
+
+    <bean id="timeHandler" class="com.gbhu.aop.TimeHandler"/>
+    <bean id="videoService" class="com.gbhu.service.impl.VideoServiceImpl"/>
+<!--    aop配置-->
+    <aop:config>
+<!--        切面 aspect-->
+        <aop:aspect id="timeAspect" ref="timeHandler">
+<!--            切入点表达式 pointcut-->
+            <aop:pointcut id="allMehodLogPointCut" expression="execution(* com.gbhu.service.VideoService.*(..))"/>
+<!--            前置后置通知-->
+            <aop:before method="printBefore" pointcut-ref="allMehodLogPointCut"/>
+            <aop:after method="printAfter" pointcut-ref="allMehodLogPointCut"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

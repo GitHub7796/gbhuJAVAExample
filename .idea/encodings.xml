@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/commonUtils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commonUtils/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/designPattern/designPatternLearn/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/designPattern/designPatternLearn/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/designPattern/designPatternPractice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/designPattern/designPatternPractice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/designPattern/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/designPattern/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/groovyPure/java1-7/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/groovyPure/java1-7/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/groovyPure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/groovyPure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaPure/java1-7/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaPure/java1-7/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaPure/java8/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaPure/java8/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaPure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaPure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/spring5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/spring5/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/springboot2/springboot2Groovy4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/springboot2/springboot2Pure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/springboot2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/springboot2/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
