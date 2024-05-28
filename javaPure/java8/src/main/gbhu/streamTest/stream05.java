@@ -1,4 +1,4 @@
-package streamTest;
+package main.gbhu.streamTest;
 
 
 import org.junit.Test;

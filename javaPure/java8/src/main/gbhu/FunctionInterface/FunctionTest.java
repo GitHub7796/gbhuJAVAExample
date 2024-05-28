@@ -1,12 +1,12 @@
-package FunctionInterface;
+package main.gbhu.FunctionInterface;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.util.function.Function;
 
 public class FunctionTest {
 
-    @Test
+//    @Test
     public void test01() {
 //        Function
     }

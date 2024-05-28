@@ -1,4 +1,4 @@
-package streamTest;
+package main.gbhu.streamTest;
 
 /**
  * @Author gb.hu
