@@ -1,8 +1,6 @@
-package main.gbhu.FunctionInterface;
+package main.gbhu.FunctionProgram;
 
 //import org.junit.Test;
-
-import java.util.function.Function;
 
 public class FunctionTest {
 

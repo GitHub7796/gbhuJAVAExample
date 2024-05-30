@@ -48,14 +48,14 @@ public class SystemCurrentTimeMillis {
     @Test
     public void test3() throws InterruptedException {
         //使用封装的Timer
-        Timer timer = new Timer();
-        timer.start();
+        CustomeTimer customeTimer = new CustomeTimer();
+        customeTimer.start();
 
         //处理逻辑
         Thread.sleep(100);
 
-        timer.end();
-        long totalTime1 = timer.getTotalTime();
+        customeTimer.end();
+        long totalTime1 = customeTimer.getTotalTime();
         System.out.println(totalTime1);
         //109 结果一直在变化
     }

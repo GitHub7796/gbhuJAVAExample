@@ -1,6 +1,9 @@
 package main.gbhu.dateLearn;
 
-public class Timer {
+/**
+ * 自定义计时器
+ */
+public class CustomeTimer {
     private long startTime;
     private long endTime;
 
