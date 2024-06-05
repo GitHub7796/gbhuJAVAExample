@@ -23,6 +23,7 @@ public class DateFormat {
     public void testDateTimeFormatter() throws ParseException {
         //具体每个常量代表的含义 可以 查看源代码的注释
         DateTimeFormatter formatter=DateTimeFormatter.BASIC_ISO_DATE;
+        DateTimeFormatter formatter2=DateTimeFormatter.ofPattern("yyyy-MM-dd");
         //java.time.LocalDate->string
         String formattedDate = formatter.format(LocalDate.now());
         //string->java.time.LocalDate

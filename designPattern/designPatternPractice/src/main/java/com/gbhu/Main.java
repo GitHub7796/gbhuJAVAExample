@@ -1,4 +1,4 @@
-package org.example;
+package com.gbhu;
 
 public class Main {
     public static void main(String[] args) {

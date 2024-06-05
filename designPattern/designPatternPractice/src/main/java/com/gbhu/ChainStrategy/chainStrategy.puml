@@ -1,27 +1,41 @@
 @startuml
 'https://plantuml.com/class-diagram
-
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+together{
+interface CustomTableMapper<CustomTable>
+class CustomTable
 }
-
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+abstract class ChainTable{
+java.sql.TimeStamp startDateTime
+java.sql.TimeStamp endDateTime
 }
+CustomTable --> ChainTable
+interface ChainStrategy{
+presistentChain(Record<Dao> record)
+}
+interface ChainStrategy<Dao>{}
+interface FullChainStrategy<Dao>{}
+interface IncrementChainStrategy<Dao>{}
+class InsertChainStrategy<Dao>{}
+class UpdateChainStrategy<Dao>{}
+class DeleteChainStrategy<Dao>{}
 
+FullChainStrategy ..> ChainStrategy
+IncrementChainStrategy ..> ChainStrategy
+InsertChainStrategy ..> FullChainStrategy
+UpdateChainStrategy ..> FullChainStrategy
+DeleteChainStrategy ..> FullChainStrategy
+
+ChainStrategy --o Record
+class Record<Dao,Mapper>{
+- Dao dao // 每行记录
+- Mapper mapper // 每行记录的持久化对象
+- ChainStrategy<Dao> chainStrategy //持久化的拉链方式
+}
+enum ChainOP{
+CHAIN_INSERT
+CHAIN_UPDATE
+CHAIN_DELETE
+}
+interface FullChainService{
+}
 @enduml
